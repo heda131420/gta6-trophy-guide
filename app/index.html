@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Tracker — GTA VI PS5 Trophy Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <h1>Leonida Trophy Tracker</h1>
+    <p class="tagline">Every one of the 55 trophies — official names, a practical guide to each, a roadmap to platinum, and a checklist that saves your progress.</p>
+  </div>
+  <div class="progress-card" id="progress-card">
+    <p class="progress-count" id="progress-count">0 of 55 earned</p>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <p class="progress-grades" id="progress-grades"></p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <a href="?view=checklist" data-view="checklist" id="tab-checklist">Checklist</a>
+  <a href="?view=roadmap" data-view="roadmap" id="tab-roadmap">Roadmap to Platinum</a>
+  <span class="tabs-note" id="tabs-note"></span>
+</nav>
+
+<section class="roadmap-strip" id="roadmap-strip" aria-label="Roadmap overview"></section>
+
+<section class="controls" id="controls">
+  <label class="control">Search
+    <input type="search" id="q" placeholder="Trophy name or keyword…" autocomplete="off">
+  </label>
+  <label class="control">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum (1)</option>
+      <option value="gold">Gold (2)</option>
+      <option value="silver">Silver (6)</option>
+      <option value="bronze">Bronze (46)</option>
+    </select>
+  </label>
+  <label class="control">Category
+    <select id="category">
+      <option value="all">All categories</option>
+      <option value="story">Story</option>
+      <option value="side-quests">Side questlines</option>
+      <option value="activities">Activities</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="combat">Combat &amp; robberies</option>
+      <option value="exploration">Exploration &amp; money</option>
+      <option value="platinum">Platinum</option>
+    </select>
+  </label>
+  <label class="control">Status
+    <select id="status">
+      <option value="all">All trophies</option>
+      <option value="earned">Earned</option>
+      <option value="todo">Not yet earned</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="missable-only"> Missable only</label>
+  <label class="check"><input type="checkbox" id="spoilers"> Hide story spoilers</label>
+  <span class="spacer"></span>
+  <button id="export" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
+</section>
+
+<main id="main">
+  <section id="view-checklist" class="view">
+    <p class="result-line" id="result-line"></p>
+    <table class="trophy-table">
+      <thead><tr><th class="col-earned">Earned</th><th class="col-trophy">Trophy</th><th class="col-grade">Grade</th><th class="col-guide">How to get it</th><th class="col-open">Guide</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+
+  <section id="view-detail" class="view" hidden>
+    <p class="back-link"><a href="?view=checklist">&larr; Back to the checklist</a></p>
+    <article class="detail" id="detail"></article>
+    <p class="detail-nav" id="detail-nav"></p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to platinum</h2>
+    <p class="roadmap-intro">One playthrough is enough — about 200 hours. Do the story first and pick up what you can along the way, then clean up side questlines, activities and collectibles, and finish with robberies, money and the last stragglers. Only one trophy can be missed: <strong>Positive Mental Attitude</strong> (the Chapter 1 meditation).</p>
+    <div class="phases" id="phases"></div>
+    <aside class="missable-callout" id="missable-callout"></aside>
+  </section>
+</main>
+
+<footer>
+  <p>Guides are written for this tracker from the sources cited beside each trophy. Official trophy names, descriptions and grades are as PlayStation publishes them. No Rockstar Games artwork or logos are used. Works fully offline — progress is saved in your browser only.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
